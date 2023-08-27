@@ -30,3 +30,22 @@ const shadowlHeader = () =>{
                         : header.classList.remove('shadow-header')
 }
 window.addEventListener('scroll', shadowlHeader)
+
+const contactForm = document.getElementById('contact-form'),
+      contactMessage = document.getElementById('contact-message')
+const sendEmail = (e) => {
+    e.preventDefault()
+    emailjs.sendForm('service_1njk6y9','template_50kwrp4','#contact-form','zNZmAZSG6jk4wUcc7')
+    .then(()=>{
+        contactMessage.textContent = 'Message sent successfully :)'
+
+        setTimeout(()=> {
+            contactMessage.textContact =''
+        }, 5000)
+        contactForm.reset()
+    }, () =>{
+        contactMessage.textContent='Message not sent (service error)'
+    })
+
+}
+contactForm.addEventListener('submit', sendEmail)
