@@ -427,9 +427,27 @@ img {
   overflow: hidden;
   transition: background-color .4s;
 }
-.home__scroll-box{
+.home__scroll-box i{
   animation: scroll-down 3s infinite;
 }
+
+@keyframes scroll-down{
+  0%{
+    transition: translateY(-1rem);
+    opacity: 0;
+  }
+  50%{
+    transition: translateY(0);
+    opacity: 1;
+  }
+  100%{
+    transition: translateY(.6rem);
+    opacity: 0  ;
+  }
+}
+
+
+
 /*=============== BUTTON ===============*/
 
 
