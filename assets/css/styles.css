@@ -549,12 +549,13 @@ img {
 
 .about__info{
   padding-left: 1.25rem;
-  
+
 }
 .about__description{
   position: relative;
   color: var(--title-color);
   margin-bottom: 1.5rem;
+
 }
 
 .about__description::after{
@@ -565,7 +566,7 @@ img {
   position: absolute;
   left: -1.75rem;
   top: .5rem;
-
+     
 }
 .about__list{
   list-style: square;
