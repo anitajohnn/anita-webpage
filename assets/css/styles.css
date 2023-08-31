@@ -770,7 +770,7 @@ row-gap: 2rem;
   transition: background-color .4s;
 }
 .contact__title{
-  columns: var(--white-color);
+  color: var(--white-color);
   font-size: var(--h2-font-size);
   margin-bottom: 2rem;
   text-align: center;
@@ -822,14 +822,14 @@ row-gap: 2rem;
 }
 .contact__input:focus{
   border: 3px solid var(--white-color);
-  
+
 }
 .contact__input:-webkit-autofill{
   transition: background-color 6000s, color 6000s;
 }
 .contact__label{
   position: absolute;
-  top:8px;
+  top: -16px;
   left: 10px;
   color: var(--text-color-light);
   font-size: var(--small-font-size);
@@ -839,9 +839,10 @@ row-gap: 2rem;
   pointer-events: none;
   transition: top .4s, opacity .4s, background-color .4s;
   opacity: 0;
+
 }
 .contact__form .contact__area{
-  height: 10rem;
+  height: 10rem; 
 
 }
 .contact__area textarea{
@@ -851,21 +852,23 @@ row-gap: 2rem;
 .contact__button{
   background-color: var(--first-color);
   cursor: pointer;
-
 }
 .contact__input:focus::placeholder{
   opacity: 0;
 
+
 }
-.contact__input:focus + .contact__label,
-.contact__input:not(:placeholder-shown).contact__input:not(:focus)+ .contact__label{
+
+.contact__input:focus + .contact__label
+.contact__input:not(:placeholder-shown).contact__input:not(:focus)+.contact__label{
   opacity: 1;
   top: -16px;
+
 }
 .contact__social{
   display: grid;
   row-gap: 1rem;
-  background-color: hsla(0, 0%, 10%);
+  background-color: hsl(0, 0%, 10%);
   padding-block: 1rem 2rem;
   text-align: center;
 
@@ -879,12 +882,12 @@ row-gap: 2rem;
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
-
 }
 .contact__social-description-1{
   color: var(--text-color-light);
   font-size: var(--small-font-size);
   margin-bottom: .5rem;
+
 }
 .contact__social-description-2{
   color: var(--white-color);
